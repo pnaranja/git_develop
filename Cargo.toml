@@ -1,0 +1,7 @@
+[package]
+name = "git_develop"
+version = "0.1.0"
+authors = ["Paul Naranja <pnaranja@chegg.com>"]
+edition = "2018"
+
+[dependencies]
