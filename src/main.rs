@@ -58,6 +58,12 @@ fn main() {
         println!("Removing branch: {}", current_branch);
         handle_cmd_stderr(
             Command::new("git")
+                .args(&["push", "origin", "--delete", &current_branch])
+                .output()
+                .unwrap_or_else(handle_err),
+        );
+        handle_cmd_stderr(
+            Command::new("git")
                 .args(&["branch", "-d", &current_branch])
                 .output()
                 .unwrap_or_else(handle_err),
