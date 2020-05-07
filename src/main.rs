@@ -51,7 +51,7 @@ fn main() {
             .unwrap_or_else(handle_err),
     );
 
-    if current_branch == "develop" {
+    if current_branch == String::from("develop") {
         eprintln!("Will not remove develop branch");
         process::exit(1);
     } else {
